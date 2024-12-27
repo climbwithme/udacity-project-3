@@ -39,9 +39,9 @@ Use the [Docker File](Dockerfile) for testing locally.
 Use the [Buildspec File](buildspec.yaml) for testing via ECR-CodeBuild.
 
 
-![CodeBuild Setup](evidences\00_code_build_01_build_history.png)
-![ECR Config](evidences\01_ECR_01_repo_details.png)
-![ECR Config](evidences\01_ECR_02_created_image.png)
+![CodeBuild Setup](evidences/00_code_build_01_build_history.png)
+![ECR Config](evidences/01_ECR_01_repo_details.png)
+![ECR Config](evidences/01_ECR_02_created_image.png)
 
 #### b. APP SETUP
 Run the below deployment files using `kubectl`:
@@ -56,7 +56,7 @@ Run the below deployment files using `kubectl`:
 CodeBuild will create a new build whenever a new PULL REQUEST is merged via github.
 
 #### a. Pipeline configuration
-![CodeBuild Setup](evidences\00_code_build_02_project_config.png)
+![CodeBuild Setup](evidences/00_code_build_02_project_config.png)
 
 
 ## 3. Verification of the setup
@@ -64,24 +64,24 @@ CodeBuild will create a new build whenever a new PULL REQUEST is merged via gith
 Use `kubectl` commands to validate the services and pods running statuses
 
 #### a. Services Details
-![Kubectl validation](evidences\02_kubectl_screenshot_01.png)
-![Kubectl validation](evidences\02_kubectl_screenshot_02.png)
+![Kubectl validation](evidences/02_kubectl_screenshot_01.png)
+![Kubectl validation](evidences/02_kubectl_screenshot_02.png)
 
 
 ## 4. Validate with cloudwatch insights
 
 Use the application log under cluser to validate the health check of the application:
 
-![Cloudwatch Log Events](evidences\03_cloudwatch_00_Insights_log_events.png)
+![Cloudwatch Log Events](evidences/03_cloudwatch_00_Insights_log_events.png)
 
 Monitor the utilization of the pods via Insights page: 
 
-![Cloudwatch Map View](evidences\03_cloudwatch_02_map_view.png)
+![Cloudwatch Map View](evidences/03_cloudwatch_02_map_view.png)
 
 ## 5. External IP  Endpoints: 
 
 [DAILY USAGE] http://a3a9cd15b5fd94bcd8f958694f6cffdb-1501814250.us-east-1.elb.amazonaws.com:5153/api/reports/daily_usage
-![DAILY USAGE](evidences\04_Result_Daily_Usage.png)
+![DAILY USAGE](evidences/04_Result_Daily_Usage.png)
 
 [USER VISITS] http://a3a9cd15b5fd94bcd8f958694f6cffdb-1501814250.us-east-1.elb.amazonaws.com:5153/api/reports/user_visits 
-![USER VISITS](evidences\04_Result_User_Visit.png)
+![USER VISITS](evidences/04_Result_User_Visit.png)
